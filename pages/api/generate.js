@@ -550,13 +550,24 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
     console.log("HTML rendered from template");
 
     // Generate PDF with Puppeteer
-    const browser = process.env.NODE_ENV === 'production'
-      ? await puppeteerCore.launch({
-          args: chromium.args,
-          executablePath: await chromium.executablePath(),
-          headless: chromium.headless,
-        })
-      : await puppeteer.launch({ headless: "new" });
+    // Check if running on Vercel (serverless environment)
+    const isVercel = process.env.VERCEL || process.env.VERCEL_ENV;
+    const isProduction = process.env.NODE_ENV === 'production';
+    const isServerless = isVercel || isProduction;
+    
+    let browser;
+    if (isServerless) {
+      // Configure chromium for serverless environments (Vercel, AWS Lambda, etc.)
+      browser = await puppeteerCore.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: chromium.headless,
+      });
+    } else {
+      // Local development
+      browser = await puppeteer.launch({ headless: "new" });
+    }
 
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: "networkidle0" });
