@@ -1,0 +1,48 @@
+{
+  "name": "Nicholas Carroll",
+  "email": "nicholas.carroll07@outlook.com",
+  "phone": "+1 (737) 277-5671",
+  "location": "Addison, Texas, United States",
+  "linkedin": "https://linkedin.com/in/nicholas-carroll-27614967/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Koupon Media",
+      "title": "Senior Full Stack Developer",
+      "location": "Plano, TX",
+      "start_date": "12/2018",
+      "end_date": "Present"
+    },
+    {
+      "company": "CA Technologies",
+      "title": "Senior Software Engineering",
+      "location": "Plano, TX",
+      "start_date": "07/2018 ",
+      "end_date": "12/2018"
+    },
+    {
+      "company": "CA Technologies",
+      "title": "Software Engineer",
+      "location": "Plano, TX",
+      "start_date": "07/2014",
+      "end_date": "06/2018"
+    },
+    {
+      "company": "CA Technologies",
+      "title": "Associate Software Engineer",
+      "location": "Plano, TX",
+      "start_date": "06/2013",
+      "end_date": "06/2014"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University of North Texas",
+      "start_year": "Sep 2007",
+      "end_year": "Sep 2012"
+    }
+  ]
+}

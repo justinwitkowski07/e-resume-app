@@ -1,0 +1,62 @@
+{
+  "name": "Justin Witkowski",
+  "email": "justin.witkowski07@gmail.com",
+  "phone": "+1 (516) 301-1150",
+  "location": "Greater Boston, MA, United States",
+  "linkedin": "https://www.linkedin.com/in/justin-witkowski-b5099467/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Addepar",
+      "title": "Senior Frontend Software Engineer",
+      "location": " Boston, MA",
+      "start_date": "Oct 2024",
+      "end_date": "Present"
+    },
+    {
+      "company": "Invesco US",
+      "title": "Senior Frontend Engineer",
+      "location": "Boston, MA",
+      "start_date": "Feb 2022",
+      "end_date": "Oct 2024"
+    },
+    {
+      "company": "Voatz",
+      "title": "Web Developer",
+      "location": "Boston, MA",
+      "start_date": "July 2019",
+      "end_date": "Jan 2022"
+    },
+    {
+      "company": "Tank Design",
+      "title": "Web Developer",
+      "location": "Cambridge, MA",
+      "start_date": "Oct 2015",
+      "end_date": "July 2019"
+    },
+    {
+      "company": " Travelers",
+      "title": "IT Leadership Development Program Participant(UI Developer & Mobile Enterprise Strategist)",
+      "location": "Cambridge, MA",
+      "start_date": "Oct 2015",
+      "end_date": "July 2019"
+    },
+    {
+      "company": "EMPAC  Rensselaer Polytechnic Institute",
+      "title": "Junior Web Developer",
+      "location": "Troy, NY",
+      "start_date": "Apr 2012",
+      "end_date": "Apr 2014"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology & Web Science",
+      "school": "Rensselaer Polytechnic Institute Troy, NY",
+      "start_year": "Sep 2010",
+      "end_year": "Sep 2014"
+    }
+  ]
+}

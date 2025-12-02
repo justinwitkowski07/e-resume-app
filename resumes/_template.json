@@ -1,0 +1,32 @@
+{
+  "name": "Your Full Name",
+  "email": "your.email@example.com",
+  "phone": "+1 234 567 8900",
+  "location": "City, State",
+  "linkedin": "https://www.linkedin.com/in/yourprofile",
+  "website": "https://yourwebsite.com",
+  
+  "experience": [
+    {
+      "company": "Company Name 1",
+      "location": "City, State",
+      "start_date": "Jan 2020",
+      "end_date": "Present"
+    },
+    {
+      "company": "Company Name 2",
+      "location": "City, State",
+      "start_date": "Jan 2018",
+      "end_date": "Dec 2019"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University Name",
+      "start_year": "2014",
+      "end_year": "2018"
+    }
+  ]
+}

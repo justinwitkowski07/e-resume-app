@@ -1,0 +1,46 @@
+{
+  "name": "Robert Thorne",
+  "email": "robert.thorne08@outlook.com",
+  "phone": "+1 (737) 277-5671",
+  "location": "Dallas, Texas, United States",
+  "linkedin": "",
+  "website": "",
+  "experience": [
+    {
+      "company": "Kiggla",
+      "title": "Senior Software QA Engineer",
+      "location": "Miami, FL",
+      "start_date": "July 2025",
+      "end_date": "Present"
+    },
+    {
+      "company": "M3 Tech",
+      "title": "Senior QA Engineer",
+      "location": "Canada",
+      "start_date": "July 2021",
+      "end_date": "June 2025"
+    },
+    {
+      "company": "The Church of Jesus Christ of Latter-day Saints",
+      "title": "Quality Assurance Engineer",
+      "location": "Riverton, UT",
+      "start_date": "Mar 2020",
+      "end_date": "Mar 2021"
+    },
+  {
+      "company": "The Church of Jesus Christ of Latter-day Saints",
+      "title": "QA Engineer",
+      "location": "Riverton, UT",
+      "start_date": "Mar 2020",
+      "end_date": "Mar 2021"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Arts, International Relations",
+      "school": "Brigham Young University - Idaho, US ",
+      "start_year": "Sep 2008",
+      "end_year": "Sep 2015"
+    }
+  ]
+}

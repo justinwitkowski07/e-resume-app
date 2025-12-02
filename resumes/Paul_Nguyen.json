@@ -1,0 +1,48 @@
+{
+  "name": "Paul Nguyen",
+  "email": "paul.n929@outlook.com",
+  "phone": "",
+  "location": "Lublin, Lubelskie, Poland",
+  "linkedin": "https://linkedin.com/in/paulnguyen-5a437b38a",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "RokkerX",
+      "title": "Senior Full Stack Engineer",
+      "location": "Sofia, Bulgaria",
+      "start_date": "May 2024",
+      "end_date": "Present"
+    },
+    {
+      "company": "Accedia",
+      "title": "Software Engineer",
+      "location": "Sofia 1407, Bulgaria",
+      "start_date": "January 2021",
+      "end_date": "April 2024 "
+    },
+    {
+      "company": "SoftTeco",
+      "title": "Full Stack Developer",
+      "location": "Kaunas 44250, Lithuania",
+      "start_date": "January 2019",
+      "end_date": "December 2020"
+    },
+    {
+      "company": "Rikkeisoft",
+      "title": "Junior Full Stack Developers",
+      "location": "Hanoi, Vietnam",
+      "start_date": "April 2017",
+      "end_date": "December 2018"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Vietnam National University, Hanoi",
+      "start_year": "Sep 2012",
+      "end_year": "Sep 2016"
+    }
+  ]
+}

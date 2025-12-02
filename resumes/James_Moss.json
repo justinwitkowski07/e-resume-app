@@ -1,0 +1,88 @@
+{
+  "name": "James Xavyr Moss",
+  "email": "james.moss06@outlook.com",
+  "phone": "+1 (516) 301-1150",
+  "location": "New York City Metropolitan Area, United States",
+  "linkedin": "https://linkedin.com/in/j-xavyr-moss",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Grayshift",
+      "title": "Senior Full Stack Engineer",
+      "location": "Atlanta, GA",
+      "start_date": "Oct 2021",
+      "end_date": "Present"
+    },
+    {
+      "company": "Bantam Technologies",
+      "title": "Senior Frontend Developer",
+      "location": "Kansas City, MO",
+      "start_date": "Mar 2021",
+      "end_date": "Oct 2021"
+    },
+    {
+      "company": "CyberGRX",
+      "title": "Senior Frontend Developer",
+      "location": "Denver, CO",
+      "start_date": "Dec 2018",
+      "end_date": "Mar 2021"
+    },
+    {
+      "company": "Gnarbox",
+      "title": "Software Engineer",
+      "location": "Santa Monica, CA",
+      "start_date": "July 2018",
+      "end_date": "Dec 2018"
+    },
+    {
+      "company": "Codesmith",
+      "title": "Senior Software Engineer",
+      "location": "Venice, CA",
+      "start_date": "Jan 2018",
+      "end_date": "Dec 2018"
+    },
+    {
+      "company": "LiveQL",
+      "title": "Software Engineer (Open Source Project)",
+      "location": "Playa Del Rey, CA",
+      "start_date": "Jan 2018",
+      "end_date": "Apr 2018"
+    },
+    {
+      "company": "Cevado Technologies",
+      "title": "Web Developer",
+      "location": "Chelan, WA",
+      "start_date": "July 2016",
+      "end_date": "Oct 2017"
+    },
+    {
+      "company": "Meng Tao Collegiate Consulting",
+      "title": "Full Stack Engineer",
+      "location": "Beijing, China",
+      "start_date": "Jan 2018",
+      "end_date": "Apr 2018"
+    },
+    {
+      "company": "Esri",
+      "title": "GIS Server Analyst",
+      "location": "Redlands, CA",
+      "start_date": "Jan 2014",
+      "end_date": "Aug 2014"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Arts, International Relations",
+      "school": "Pitzer College - Claremont, CA",
+      "start_year": "Sep 2009",
+      "end_year": "Sep 2013"
+    },
+    {
+      "degree": "Master's degree, Management Information Systems, General",
+      "school": "Claremont Graduate University - Claremont, CA",
+      "start_year": "Sep 2013",
+      "end_year": "Sep 2014"
+    }
+  ]
+}
