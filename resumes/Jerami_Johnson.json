@@ -1,0 +1,40 @@
+{
+    "name": "Jerami Johnson",
+    "email": "jerami.johnson07@outlook.com",
+    "phone": "+1 (737) 277-5671",
+    "location": "Austin, Texas, United States",
+    "linkedin": "",
+    "website": "",
+    
+    "experience": [
+      {
+        "company": "Kiggla",
+        "title": "Senior Full Stack Software Engineer",
+        "location": "Miami, Florida",
+        "start_date": "July 2025",
+        "end_date": "Present"
+      },
+      {
+        "company": "PuzzleHR",
+        "title": "Software Engineer",
+        "location": "Tampa, Florida",
+        "start_date": "October 2019",
+        "end_date": "June 2025"
+      },
+      {
+        "company": "Visa",
+        "title": "Junior Software Engineer",
+        "location": "Foster City, California",
+        "start_date": "May 2016",
+        "end_date": "August 2019"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science - BS, Computer Science",
+        "school": "West Texas A&M University",
+          "start_year": "August 2014",
+          "end_year": "May 2016"
+      }
+    ]
+  }
