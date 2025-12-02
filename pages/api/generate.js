@@ -103,8 +103,26 @@ const getTemplate = () => {
   return templateCache;
 };
 
-// Call OpenAI with timeout & retries
-async function callOpenAI(promptOrMessages, model = null, maxTokens = 64000, retries = 2, timeoutMs = 120000) {
+// Cache profile data in memory to avoid repeated file reads
+const profileCache = new Map();
+
+const loadProfile = (profileName) => {
+  if (profileCache.has(profileName)) {
+    return profileCache.get(profileName);
+  }
+  
+  const profilePath = path.join(process.cwd(), "resumes", `${profileName}.json`);
+  if (!fs.existsSync(profilePath)) {
+    return null;
+  }
+  
+  const profileData = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
+  profileCache.set(profileName, profileData);
+  return profileData;
+};
+
+// Call OpenAI with timeout & retries (optimized with reduced maxTokens)
+async function callOpenAI(promptOrMessages, model = null, maxTokens = 32000, retries = 2, timeoutMs = 90000) {
   while (retries > 0) {
     try {
       // Handle both string prompts and message arrays
@@ -225,65 +243,39 @@ export default async function handler(req, res) {
     
     console.log("✅ Job appears to be REMOTE - Proceeding");
 
-    // Load profile JSON
+    // Load profile JSON (using cache)
     console.log(`Loading profile: ${profile}`);
-    const profilePath = path.join(process.cwd(), "resumes", `${profile}.json`);
+    const profileData = loadProfile(profile);
     
-    if (!fs.existsSync(profilePath)) {
+    if (!profileData) {
       return res.status(404).send(`Profile "${profile}" not found`);
     }
-    
-    const profileData = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
 
     const yearsOfExperience = calculateYears(profileData.experience) - 1;
 
-    // AI PROMPT: Generate ATS-optimized resume content as JSON
-    const prompt = `You are a world-class ATS optimization expert. Create a resume that scores 95-100% on ATS.
+    // AI PROMPT: Generate ATS-optimized resume content as JSON (optimized - more concise)
+    const prompt = `ATS optimization expert. Generate resume JSON: {"title":"...","summary":"...","skills":{...},"experience":[...]}
 
-**🚨 CRITICAL OUTPUT: Return ONLY valid JSON. No markdown, explanations, or extra text.**
-Format: {"title":"...","summary":"...","skills":{...},"experience":[...]}
+**OUTPUT: ONLY valid JSON, no markdown/explanations.**
 
-## PROFILE DATA:
-**Candidate:** ${profileData.name}
-**Contact:** ${profileData.email} | ${profileData.phone} | ${profileData.location}
-**Experience:** ${yearsOfExperience} years
-**Most Recent Title:** ${profileData.experience[0]?.title || 'N/A'} (USE THIS AS BASE TITLE)
+**PROFILE:**
+Candidate: ${profileData.name} | ${profileData.email} | ${profileData.phone} | ${profileData.location}
+Experience: ${yearsOfExperience} years | Most Recent: ${profileData.experience[0]?.title || 'N/A'}
 
-**WORK HISTORY:**
-${profileData.experience.map((job, idx) => {
-  const parts = [`${idx + 1}. ${job.company}`];
-  if (job.title) parts.push(job.title);
-  if (job.location) parts.push(job.location);
-  parts.push(`${job.start_date} - ${job.end_date}`);
-  return parts.join(' | ');
-}).join('\n')}
+**WORK:**
+${profileData.experience.map((job, idx) => 
+  `${idx + 1}. ${job.company} | ${job.title || ''} | ${job.start_date} - ${job.end_date}`
+).join('\n')}
 
 **EDUCATION:**
-${profileData.education.map(edu => `- ${edu.degree}, ${edu.school} (${edu.start_year}-${edu.end_year})`).join('\n')}
+${profileData.education.map(edu => `${edu.degree}, ${edu.school} (${edu.start_year}-${edu.end_year})`).join('\n')}
 
----
-
-## JOB DESCRIPTION:
+**JOB DESCRIPTION:**
 ${jd}
 
----
+**INSTRUCTIONS:**
 
-## INSTRUCTIONS:
-
-### **1. EXTRACT DOMAIN KEYWORDS** (Critical for 95%+ score)
-
-Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific to company's product/industry:
-
-**Examples by Domain:**
-- **Identity/Security:** passwordless authentication, zero-trust architecture, OAuth2, JWT, SAML, OpenID Connect, WebAuthn, FIDO2, MFA, SSO, biometric security, encryption, key management, PKI, SOC 2, ISO 27001, GDPR
-- **Payments/FinTech:** PCI-DSS compliance, payment processing, payment infrastructure, fraud detection, KYC/AML, 3D Secure, tokenization, ACH transfers, subscription billing, reconciliation, merchant services, SOC 2
-- **Healthcare:** HIPAA compliance, HL7, FHIR, DICOM, PHI protection, EHR systems, EMR, Epic integration, Cerner, patient privacy, FDA compliance, HITRUST
-- **Data/Analytics:** data warehousing, data governance, Snowflake, data lake, data lakehouse, GDPR compliance, data residency, PII protection, data quality, data lineage
-
-**WHERE TO USE:**
-- Summary: 3-5 domain keywords (lines 2-4)
-- Skills: Dedicated domain category with 10-15 keywords
-- Experience: 2-3 bullets MUST include domain keywords
+**1. DOMAIN KEYWORDS** (10-15 from JD "About Us"): Identity/Security (OAuth2, JWT, SAML, MFA, SSO, SOC 2, GDPR), Payments (PCI-DSS, fraud detection, KYC/AML, tokenization), Healthcare (HIPAA, HL7, FHIR, EHR), Data (data governance, GDPR, PII protection). Use in Summary (3-5), Skills (dedicated category), Experience (2-3 bullets).
 
 ---
 
@@ -308,110 +300,25 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 
 ---
 
-### **3. SUMMARY** (5-6 lines, 8-12 JD keywords + 3-5 domain keywords)
-
-**Structure:**
-- **Line 1:** [Profile's Most Recent Title] with ${yearsOfExperience}+ years in [domain from JD] across startup and enterprise environments
-- **Line 2:** Expertise in [domain keyword] + [3-4 EXACT JD technologies WITH versions if specified]
-- **Line 3:** Proven track record in [domain keyword] + [key achievement with metric: %, $, time, scale]
-- **Line 4:** Proficient in [3-4 more JD technologies/methodologies]
-- **Line 5:** [Soft skill from JD] professional with experience in [Agile/leadership/collaboration] in fast-paced environments
-- **Line 6:** Strong focus on [2-3 key JD skill areas] and delivering scalable, production-ready solutions
-
-**Example (FinTech):**
-"Senior Full Stack Engineer with 8+ years building scalable fintech platforms. Expertise in **payment processing systems**, **PCI-DSS compliance**, React.js 18, Node.js 20, and PostgreSQL. Proven track record implementing **fraud detection algorithms** that reduced chargebacks by 40% and processed $500M+ annually. Proficient in AWS infrastructure, Docker, Kubernetes, and **KYC/AML compliance frameworks**. Collaborative problem-solver with experience leading cross-functional teams in fast-paced startup environments. Strong focus on secure payment infrastructure, regulatory compliance, and delivering high-performance financial applications."
+**3. SUMMARY** (5-6 lines, 8-12 JD keywords + 3-5 domain): Line 1: [Title] with ${yearsOfExperience}+ years in [domain]. Line 2: Expertise in [domain keyword] + [3-4 JD techs with versions]. Line 3: Track record in [domain keyword] + [achievement with metric]. Line 4: Proficient in [3-4 more JD techs]. Line 5: [Soft skill] professional with Agile/leadership experience. Line 6: Focus on [2-3 JD skill areas] + scalable solutions.
 
 ---
 
-### **4. SKILLS** (60-80 total, 5-8 categories)
-
-**Rules:**
-- Create categories based on JD focus (Frontend, Backend, Cloud, DevOps, Security, etc.)
-- 8-12 skills per category
-- Capitalize first letter of each skill
-- NO version spam: "React.js" NOT "React.js 18, React.js 17, React.js 16"
-- NO database spam: "PostgreSQL" NOT "PostgreSQL 15, 14, 13"
-- Group cloud services: "AWS (Lambda, S3, EC2, RDS)" NOT 25 separate items
-- 70% JD keywords + 30% complementary skills
-
-**Example (Full Stack Engineer):**
-\`\`\`json
-"skills": {
-  "Frontend": ["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Redux", "Vue.js", "HTML5", "CSS3"],
-  "Backend": ["Node.js", "Express.js", "Python", "Django", "FastAPI", "GraphQL", "REST APIs"],
-  "Databases": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Elasticsearch"],
-  "Cloud & Infrastructure": ["AWS (Lambda, S3, EC2, RDS, CloudFront)", "Docker", "Kubernetes", "Terraform"],
-  "DevOps & CI/CD": ["GitLab CI/CD", "GitHub Actions", "Jenkins", "Datadog", "Prometheus"],
-  "Testing": ["Jest", "Cypress", "Playwright", "React Testing Library"],
-  "Payment & Compliance": ["PCI-DSS", "Payment processing", "Stripe", "Fraud detection", "KYC/AML", "SOC 2"],
-  "Tools": ["Git", "Webpack", "Vite", "Figma", "Jira"]
-}
-\`\`\`
-Total: ~70 skills (scannable and professional)
-
-**If relevant, create domain-specific category:**
-- FinTech → "Payment & Compliance"
-- Healthcare → "Healthcare Compliance & Standards"
-- Security → "Security & Identity"
-- Data → "Data Governance & Compliance"
+**4. SKILLS** (60-80 total, 5-8 categories): Categories by JD focus (Frontend, Backend, Cloud, DevOps, Security). 8-12 skills/category. Capitalize first letter. NO version spam. Group cloud: "AWS (Lambda, S3, EC2)". 70% JD keywords + 30% complementary. Domain category if relevant (FinTech→"Payment & Compliance", Healthcare→"Healthcare Compliance", Security→"Security & Identity", Data→"Data Governance").
 
 ---
 
-### **5. EXPERIENCE** (${profileData.experience.length} entries, 6-8 bullets each)
+**5. EXPERIENCE** (${profileData.experience.length} entries, 6-8 bullets each): Match work history. 6-8 bullets/job (recent=8, older=5-6). 25-35 words/bullet. 2-4 JD keywords/bullet. EVERY bullet needs metric (%, $, time, scale, users). Industry context in 2-3 bullets/job.
 
-**Requirements:**
-- Generate ${profileData.experience.length} job entries matching work history
-- 6-8 bullets per job (most recent jobs get 8, older jobs 5-6)
-- 25-35 words per bullet
-- Include 2-4 JD keywords per bullet
-- EVERY bullet needs a metric (%, $, time, scale, users)
-- Add industry context to 2-3 bullets per job
+**Bullet:** [Action Verb] + [JD Tech] + [built] + [impact] + [metric]. Verbs: Architected, Engineered, Designed, Built, Developed, Implemented, Optimized, Enhanced, Led, Spearheaded, Automated, Deployed. AVOID: "Responsible for", "Worked on".
 
-**Bullet Structure:**
-[Action Verb] + [JD Technology] + [what you built] + [business impact] + [metric]
-
-**Action Verbs:**
-✅ USE: Architected, Engineered, Designed, Built, Developed, Implemented, Optimized, Enhanced, Led, Spearheaded, Automated, Deployed
-❌ AVOID: "Responsible for", "Duties included", "Tasked with", "Worked on"
-
-**Industry Context Examples:**
-- Amazon → "for e-commerce recommendation system"
-- Stripe → "for fintech payment platform"
-- Salesforce → "for B2B SaaS customers"
-- If unknown → use JD company's industry or default to "SaaS platform"
-
-**Metrics Examples:**
-- Performance: "40% faster", "reduced latency by 200ms", "3x throughput"
-- Scale: "50K+ users", "10M+ records", "1000+ requests/sec"
-- Cost: "saved $500K annually", "reduced AWS costs by 35%"
-- Time: "deployment from 2hrs to 15min", "accelerated dev by 40%"
-- Quality: "99.9% uptime", "reduced bugs by 50%", "90% code coverage"
-- Team: "mentored 5 developers", "led team of 10"
-
-**Example Bullet (with domain keywords):**
-"Architected **secure payment processing system** using **PCI-DSS compliant** infrastructure with Node.js 20, PostgreSQL, and Redis, implementing **fraud detection algorithms** and **tokenization** that processed $500M+ annually while reducing chargebacks by 40% and maintaining 99.99% uptime for 2M+ users."
+**Metrics:** Performance (40% faster, 3x throughput), Scale (50K+ users, 10M+ records), Cost (saved $500K, reduced costs 35%), Time (deployment 2hrs→15min), Quality (99.9% uptime, 90% coverage), Team (led team of 10).
 
 ---
 
-## **🎯 ATS OPTIMIZATION CHECKLIST:**
+**ATS CHECKLIST:** Use EXACT JD phrases (not synonyms). High-priority keywords 3-4x (Skills+Summary+2-3 bullets). All required/preferred JD skills in Skills. Match tech versions. Natural flow, professional tone, varied verbs, strong metrics, domain keywords integrated.
 
-**Keyword Usage:**
-- Use EXACT phrases from JD (not synonyms)
-- High-priority keywords appear 3-4x (Skills + Summary + 2-3 bullets)
-- All required JD skills in Skills section
-- All preferred JD skills in Skills section
-- Technology versions match JD if specified
-
-**Content Quality:**
-- Natural, human-written flow (not robotic)
-- Professional tone throughout
-- Varied action verbs
-- Strong metrics in every bullet
-- Domain keywords integrated naturally
-
----
-
-Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}]}
+**OUTPUT:** ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}]}
 `;
 
     const aiResponse = await callOpenAI(prompt);
@@ -454,17 +361,15 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       throw new Error("AI refused to generate resume. The prompt may be too complex. Please try again with a shorter job description or simpler requirements.");
     }
     
-    // Enhanced JSON extraction - handle various formats
-    // Remove markdown code blocks (case insensitive)
-    content = content.replace(/```json\s*/gi, "");
-    content = content.replace(/```javascript\s*/gi, "");
-    content = content.replace(/```\s*/g, "");
+    // Optimized JSON extraction - handle various formats
+    // Remove markdown code blocks and common prefixes in one pass
+    content = content
+      .replace(/```(?:json|javascript)?\s*/gi, "")
+      .replace(/```\s*/g, "")
+      .replace(/^(here is|here's|this is|the json is):?\s*/gi, "")
+      .trim();
     
-    // Remove common prefixes
-    content = content.replace(/^(here is|here's|this is|the json is):?\s*/gi, "");
-    
-    // Try to extract JSON from text if wrapped
-    // Look for content between first { and last }
+    // Extract JSON object boundaries
     const firstBrace = content.indexOf('{');
     const lastBrace = content.lastIndexOf('}');
     
@@ -474,8 +379,6 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       console.error("No JSON object found in response");
       throw new Error("AI did not return valid JSON format. Please try again.");
     }
-    
-    content = content.trim();
     
     // Parse JSON with better error handling
     let resumeContent;
@@ -488,12 +391,11 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       console.error("First 1000 chars:", content.substring(0, 1000));
       console.error("Last 500 chars:", content.substring(Math.max(0, content.length - 500)));
       
-      // Try to fix common JSON issues
+      // Try to fix common JSON issues (optimized)
       try {
-        // Remove trailing commas
-        let fixedContent = content.replace(/,(\s*[}\]])/g, '$1');
-        // Fix unescaped quotes in strings (basic attempt)
-        fixedContent = fixedContent.replace(/([^\\])"([^",:}\]]*)":/g, '$1\\"$2":');
+        let fixedContent = content
+          .replace(/,(\s*[}\]])/g, '$1') // Remove trailing commas
+          .replace(/,\s*,/g, ','); // Remove double commas
         resumeContent = JSON.parse(fixedContent);
         console.log("✅ Successfully parsed after fixing common issues");
       } catch (secondError) {
@@ -549,7 +451,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
     const html = template(templateData);
     console.log("HTML rendered from template");
 
-    // Generate PDF with Puppeteer
+    // Generate PDF with Puppeteer (optimized)
     // Check if running on Vercel (serverless environment)
     const isVercel = process.env.VERCEL || process.env.VERCEL_ENV;
     const isProduction = process.env.NODE_ENV === 'production';
@@ -557,20 +459,43 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
     
     let browser;
     if (isServerless) {
-      // Configure chromium for serverless environments (Vercel, AWS Lambda, etc.)
+      // Optimized chromium args for faster startup in serverless
+      const optimizedArgs = [
+        ...chromium.args,
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-web-security',
+        '--disable-features=IsolateOrigins,site-per-process',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-renderer-backgrounding'
+      ];
+      
       browser = await puppeteerCore.launch({
-        args: chromium.args,
+        args: optimizedArgs,
         defaultViewport: chromium.defaultViewport,
         executablePath: await chromium.executablePath(),
         headless: chromium.headless,
       });
     } else {
-      // Local development
-      browser = await puppeteer.launch({ headless: "new" });
+      // Local development with optimized settings
+      browser = await puppeteer.launch({ 
+        headless: "new",
+        args: [
+          '--disable-dev-shm-usage',
+          '--disable-gpu',
+          '--no-sandbox'
+        ]
+      });
     }
 
     const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: "networkidle0" });
+    // Use 'load' instead of 'networkidle0' - much faster since we have no external resources
+    await page.setContent(html, { waitUntil: "load" });
+    
+    // Generate PDF with optimized settings
     const pdfBuffer = await page.pdf({
       format: "A4",
       printBackground: true,
@@ -580,7 +505,9 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
         left: "0mm", 
         right: "0mm" 
       },
+      preferCSSPageSize: false, // Faster rendering
     });
+    
     await browser.close();
 
     console.log("PDF generated successfully!");
