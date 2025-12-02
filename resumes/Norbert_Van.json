@@ -1,0 +1,48 @@
+{
+  "name": "Norbert Van",
+  "email": "norbert.van929@hotmail.com",
+  "phone": "",
+  "location": "Warsaw, Mazowieckie, Poland",
+  "linkedin": "https://www.linkedin.com/in/norbert-van-821a6a389/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "GridGain",
+      "title": "Senior Full Stack Engineer",
+      "location": "California, US",
+      "start_date": "March 2024",
+      "end_date": "September 2025"
+    },
+    {
+      "company": "Dreamix",
+      "title": "Full Stack Engineer",
+      "location": "Sofia, Bulgaria",
+      "start_date": "January 2022",
+      "end_date": "February 2024"
+    },
+    {
+      "company": " emagine",
+      "title": "Full Stack Developer",
+      "location": "Copenhagen, Denmark",
+      "start_date": "April 2018",
+      "end_date": "December 2021"
+    },
+    {
+      "company": "NashTech",
+      "title": "Junior Full stack Developer",
+      "location": "London, UK",
+      "start_date": "January 2017",
+      "end_date": "March 2018"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor's degree, Computer Science",
+      "school": "University of Science and Technology of Hanoi - USTH",
+      "start_year": "2012",
+      "end_year": "2016"
+    }
+  ]
+}
