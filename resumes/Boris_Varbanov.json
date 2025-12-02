@@ -1,0 +1,47 @@
+{
+  "name": "Boris Lazar Varbanov",
+  "email": "lazarvarbanov4@gmail.com",
+  "phone": "",
+  "location": "Sofia, Sofia City, Bulgaria",
+  "linkedin": "http://www.linkedin.com/in/boris-lazar-varbanov-738546375",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Kiggla",
+      "title": "Senior Software Engineer",
+      "location": "Florida, United States",
+      "start_date": "June 2025",
+      "end_date": "Present"
+    },
+    {
+      "company": "Snotor",
+      "title": "Senior Full Stack Engineer",
+      "location": "London Area, United Kingdom",
+      "start_date": "July 2023",
+      "end_date": "May 2025"
+    },
+    {
+      "company": "Dreamix",
+      "title": "Full Stack Engineer",
+      "location": "Sofia, Bulgaria",
+      "start_date": "March 2021",
+      "end_date": "April 2023"
+    },
+    {
+      "company": "The Bureau of Small Projects",
+      "title": "Frontend Engineer",
+      "location": "Los Angeles, California, United States",
+      "start_date": "May 2018",
+      "end_date": "February 2021"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's degree, Computer Science",
+      "school": "Technical University of Sofia - Sofia, Bulgaria",
+      "start_year": "September 2014",
+      "end_year": "August 2018"
+    }
+  ]
+}
