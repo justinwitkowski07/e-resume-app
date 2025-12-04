@@ -287,6 +287,7 @@ ${jd}
 - **JD-Related Specialization (ONLY if titles don't match):** Add 1 specialization/role that aligns with the JD focus (e.g., if applying for frontend job with full stack profile: "Frontend Specialist" or "Frontend Lead")
   - If JD is frontend-focused → "Frontend Specialist" or "Frontend Lead"
   - If JD is backend-focused → "Backend Specialist" or "Backend Architect"
+  - If JD is Full Stack-focused → "Full Stack Developer" or "Full Stack Experience"
   - If JD is DevOps-focused → "DevOps Specialist" or "Infrastructure Lead"
   - If JD is QA-focused → "QA Specialist" or "Quality Assurance Lead"
   - Match the specialization to the JD's primary focus area
