@@ -311,7 +311,19 @@ ${jd}
 
 **5. EXPERIENCE** (${profileData.experience.length} entries, 6-8 bullets each): Match work history. 6-8 bullets/job (recent=8, older=5-6). 25-35 words/bullet. 2-4 JD keywords/bullet. EVERY bullet needs metric (%, $, time, scale, users). Industry context in 2-3 bullets/job.
 
-**Bullet:** [Action Verb] + [JD Tech] + [built] + [impact] + [metric]. Verbs: Architected, Engineered, Designed, Built, Developed, Implemented, Optimized, Enhanced, Led, Spearheaded, Automated, Deployed. AVOID: "Responsible for", "Worked on".
+**CRITICAL: TECHNOLOGY RELEASE DATES** - You MUST verify that every technology/framework/tool mentioned in experience bullets was actually available/released during that job's time period. Check the job dates (start_date - end_date) and ONLY use technologies that existed at that time. Examples:
+- Angular: Released 2016 → CANNOT use for jobs before 2016
+- React: Released 2013 → CANNOT use for jobs before 2013
+- TypeScript: Released 2012 → CANNOT use for jobs before 2012
+- Vue.js: Released 2014 → CANNOT use for jobs before 2014
+- Next.js: Released 2016 → CANNOT use for jobs before 2016
+- Docker: Released 2013 → CANNOT use for jobs before 2013
+- Kubernetes: Released 2014 → CANNOT use for jobs before 2014
+- AWS Lambda: Released 2014 → CANNOT use for jobs before 2014
+- GraphQL: Released 2015 → CANNOT use for jobs before 2015
+- If unsure about a technology's release date, use generic terms or older alternatives that existed at that time (e.g., for pre-2013 frontend: jQuery, Backbone.js, AngularJS 1.x; for pre-2013 backend: PHP, Java, .NET, Ruby on Rails).
+
+**Bullet:** [Action Verb] + [JD Tech that existed during job period] + [built] + [impact] + [metric]. Verbs: Architected, Engineered, Designed, Built, Developed, Implemented, Optimized, Enhanced, Led, Spearheaded, Automated, Deployed. AVOID: "Responsible for", "Worked on".
 
 **Metrics:** Performance (40% faster, 3x throughput), Scale (50K+ users, 10M+ records), Cost (saved $500K, reduced costs 35%), Time (deployment 2hrs→15min), Quality (99.9% uptime, 90% coverage), Team (led team of 10).
 
