@@ -281,9 +281,27 @@ ${jd}
 
 ### **2. TITLE**
 - **BASE TITLE:** Use the candidate's MOST RECENT job title from their work history (first entry in experience list)
-- **CRITICAL RULE:** First, check if the profile's most recent title MATCHES or is VERY SIMILAR to the JD title/role
-  - If they match (e.g., both are "Senior Frontend Software Engineer" or "Senior Frontend Engineer" vs "Frontend Engineer"), SKIP the specialization and use format: [Profile's Most Recent Title] | [Key Tech 1] | [Key Tech 2] | [Key Tech 3] | [Key Tech 4]
-  - If they DON'T match, use format: [Profile's Most Recent Title] | [JD-Related Specialization] | [Key Tech 1] | [Key Tech 2] | [Key Tech 3] | [Key Tech 4]
+- **CRITICAL RULE - MATCHING LOGIC:** To determine if titles match, normalize both titles by:
+  1. Remove seniority indicators: "Senior", "Lead", "Principal", "Staff", "Junior", "Entry-Level" (ignore these words)
+  2. Extract core role type: "Full Stack", "Frontend", "Backend", "Software Engineer", "Developer", "Engineer", "Architect", "DevOps", "QA", etc.
+  3. Compare core role types - they MATCH if they refer to the same domain/type, even if wording differs slightly
+  
+**TITLES MATCH IF:**
+- Both are Full Stack roles: "Senior Full Stack Engineer" = "Full Stack Developer" = "Full Stack Software Engineer" = "Full Stack Engineer" → MATCH
+- Both are Frontend roles: "Senior Frontend Engineer" = "Frontend Developer" = "Frontend Software Engineer" → MATCH
+- Both are Backend roles: "Senior Backend Engineer" = "Backend Developer" = "Backend Software Engineer" → MATCH
+- Both are Software Engineer/Developer (general): "Senior Software Engineer" = "Software Developer" = "Senior Developer" → MATCH
+- Both are DevOps roles: "Senior DevOps Engineer" = "DevOps Engineer" = "DevOps Specialist" → MATCH
+
+**TITLES DON'T MATCH IF:**
+- Profile is Full Stack, JD is Frontend-only → NO MATCH (add "Frontend Specialist")
+- Profile is Frontend, JD is Backend-only → NO MATCH (add "Backend Specialist")
+- Profile is Backend, JD is Full Stack → NO MATCH (add "Full Stack Experience")
+- Profile is Software Engineer (general), JD is Frontend-specific → NO MATCH (add "Frontend Specialist")
+
+- **If titles MATCH:** Use format: [Profile's Most Recent Title] | [Key Tech 1] | [Key Tech 2] | [Key Tech 3] | [Key Tech 4] (NO specialization added)
+- **If titles DON'T match:** Use format: [Profile's Most Recent Title] | [JD-Related Specialization] | [Key Tech 1] | [Key Tech 2] | [Key Tech 3] | [Key Tech 4]
+
 - **JD-Related Specialization (ONLY if titles don't match):** Add 1 specialization/role that aligns with the JD focus (e.g., if applying for frontend job with full stack profile: "Frontend Specialist" or "Frontend Lead")
   - If JD is frontend-focused → "Frontend Specialist" or "Frontend Lead"
   - If JD is backend-focused → "Backend Specialist" or "Backend Architect"
@@ -291,13 +309,17 @@ ${jd}
   - If JD is DevOps-focused → "DevOps Specialist" or "Infrastructure Lead"
   - If JD is QA-focused → "QA Specialist" or "Quality Assurance Lead"
   - Match the specialization to the JD's primary focus area
+
 - **Tech Stack:** Extract 4-6 most important technologies/tech stack items from JD (prioritize: frameworks, tools, platforms, methodologies)
 - Separate all items with " | " (space-pipe-space)
+
 - **Examples:**
-  - Profile: "Senior Frontend Software Engineer", JD: "Senior Frontend Software Engineer" → "Senior Frontend Software Engineer | React | TypeScript | Next.js | AWS" (NO specialization added)
-  - Profile: "Senior Full Stack Engineer", JD: Frontend job → "Senior Full Stack Engineer | Frontend Specialist | React.js | TypeScript | Next.js | AWS"
-  - Profile: "Senior Software Engineer", JD: Backend job → "Senior Software Engineer | Backend Architect | Node.js | Python | Microservices | Docker"
-  - Profile: "Senior Frontend Engineer", JD: Full Stack job → "Senior Frontend Engineer | Full Stack Experience | React.js | Node.js | PostgreSQL | AWS"
+  - Profile: "Senior Full Stack Engineer", JD: "Full Stack Developer" → MATCH → "Senior Full Stack Engineer | React | TypeScript | Next.js | AWS" (NO specialization)
+  - Profile: "Full Stack Software Engineer", JD: "Full Stack Developer" → MATCH → "Full Stack Software Engineer | Java | Python | React.js | GCP" (NO specialization)
+  - Profile: "Senior Frontend Software Engineer", JD: "Frontend Developer" → MATCH → "Senior Frontend Software Engineer | React | TypeScript | Next.js | AWS" (NO specialization)
+  - Profile: "Senior Full Stack Engineer", JD: "Frontend Engineer" → NO MATCH → "Senior Full Stack Engineer | Frontend Specialist | React.js | TypeScript | Next.js | AWS"
+  - Profile: "Senior Software Engineer", JD: "Backend Engineer" → NO MATCH → "Senior Software Engineer | Backend Architect | Node.js | Python | Microservices | Docker"
+  - Profile: "Senior Frontend Engineer", JD: "Full Stack Developer" → NO MATCH → "Senior Frontend Engineer | Full Stack Experience | React.js | Node.js | PostgreSQL | AWS"
 
 ---
 
