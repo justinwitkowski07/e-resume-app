@@ -1,0 +1,48 @@
+{
+  "name": "Ramon Fajardo",
+  "email": "keepersun1@gmail.com",
+  "phone": "+63 905 708 4758 ",
+  "location": "Calamba City, Laguna 4027, Calabarzon, Philippines",
+  "linkedin": "https://linkedin.com/in/ramon-julian-6164a91b7/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Kiggla",
+      "title": "Senior Software Engineer",
+      "location": "",
+      "start_date": "10/2024",
+      "end_date": "Present"
+    },
+    {
+      "company": "PuzzleHR",
+      "title": "Software Engineer",
+      "location": "",
+      "start_date": "08/2021",
+      "end_date": "09/2024"
+    },
+    {
+      "company": "Intrado",
+      "title": "Full Stack Engineer",
+      "location": "",
+      "start_date": "04/2018",
+      "end_date": "06/2021"
+    },
+    {
+      "company": "4Mation",
+      "title": "Junior Web Developer",
+      "location": "",
+      "start_date": "06/2017",
+      "end_date": "04/2018"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Nihon university",
+      "start_year": "Sep 2012",
+      "end_year": "Sep 2017"
+    }
+  ]
+}

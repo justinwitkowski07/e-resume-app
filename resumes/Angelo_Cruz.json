@@ -1,0 +1,52 @@
+{
+    "name": "Angelo Cruz",
+    "email": "angelo.c05@outlook.com",
+    "phone": "",
+    "location": "Calamba City, Laguna 4028, Philippines",
+    "linkedin": "http://www.linkedin.com/in/angelo-cruz-72113239b",
+    "website": "",
+    "experience": [
+      {
+        "company": "Kiggla",
+        "title": "Senior FullStack Developer",
+        "location": "Miami, FL, US",
+        "start_date": "Oct 2024",
+        "end_date": "Present"
+      },
+      {
+        "company": "PuzzleHR",
+        "title": "Senior Full Stack Engineer",
+        "location": "TX, US ",
+        "start_date": "Aug 2021",
+        "end_date": "Sep 2024"
+      },
+      {
+        "company": "The Simple Vue",
+        "title": "Full Stack Engineer",
+        "location": "",
+        "start_date": "Aug 2019",
+        "end_date": "Apr 2021"
+      },
+      {
+        "company": "GlobalTix",
+        "title": "Web Developer",
+        "location": "",
+        "start_date": "Jun 2016",
+        "end_date": "Jun 2019"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master's Degree, Computer Science",
+        "school": "Kyoto University (Kyoto, Japan)",
+        "start_year": "2014",
+        "end_year": "Mar 2016"
+      },
+      {
+        "degree": "Bachelor’s Degree, Computer Science",
+        "school": "Kyoto University (Kyoto, Japan)",
+        "start_year": "Mar 2010",
+        "end_year": "Mar 2014"
+      }
+    ]
+  }

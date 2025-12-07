@@ -1,0 +1,46 @@
+{
+    "name": "Ranen Antonio",
+    "email": "ranen.an06@outlook.com",
+    "phone": "",
+    "location": "Imus, Cavite, PH",
+    "linkedin": "",
+    "website": "",
+    "experience": [
+      {
+        "company": "Cargo Express Freight",
+        "title": "Senior Full Stack Engineer",
+        "location": "Irvine, CA, US",
+        "start_date": "Oct 2024",
+        "end_date": "Present"
+      },
+      {
+        "company": "IBM Philippines",
+        "title": "Full Stack Engineer",
+        "location": "Quezon City, PH",
+        "start_date": "Jul 2023",
+        "end_date": "Jun 2024"
+      },
+      {
+        "company": "VMO Holdings",
+        "title": "Full Stack Engineer",
+        "location": "Hanoi, VN",
+        "start_date": "Aug 2022",
+        "end_date": "May 2023"
+      },
+      {
+        "company": "Appota Corporation",
+        "title": "Web Developer/Software Developer Intern",
+        "location": "Hanoi, VN",
+        "start_date": "Nov 2017",
+        "end_date": "Aug 2022"
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.S. in Computer Science",
+        "school": "Hanoi University of Science and Technology (HUST)",
+        "start_year": "2013",
+        "end_year": "Sep 2017"
+      }
+    ]
+  }

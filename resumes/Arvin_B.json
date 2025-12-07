@@ -1,0 +1,39 @@
+{
+    "name": "Arvin Bautista",
+    "email": "arvin.b7@outlook.com",
+    "phone": "",
+    "location": "San Fernando, Pampanga, PH",
+    "linkedin": "",
+    "website": "",
+    "experience": [
+      {
+        "company": "Growsari",
+        "title": "Senior Backend Developer & AI Integration Lead",
+        "location": "Pasig, PH",
+        "start_date": "Jan 2021",
+        "end_date": "Nov 2025"
+      },
+      {
+        "company": "DaDa",
+        "title": "Software Engineer / Full-Stack Developer",
+        "location": "Shanghai, China",
+        "start_date": "Feb 2018",
+        "end_date": "Dec 2020"
+      },
+      {
+        "company": "CashCashPinoy",
+        "title": "Backend Developer",
+        "location": "Pasig, PH",
+        "start_date": "May 2016",
+        "end_date": "Jan 2018"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor's degree in Computer Science",
+        "school": "Technological Institute of the Philippines | Manila, PH",
+        "start_year": "2014",
+        "end_year": "2018"
+      }
+    ]
+  }
