@@ -27,20 +27,27 @@
       "start_date": "Mar 2020",
       "end_date": "Mar 2021"
     },
-  {
+    {
+      "company": "SenaWave LLC",
+      "title": "Software Developer",
+      "location": "Greater Salt Lake City Area",
+      "start_date": "May 2017",
+      "end_date": "Feb 2020"
+    },
+    {
       "company": "The Church of Jesus Christ of Latter-day Saints",
       "title": "QA Engineer",
       "location": "Riverton, UT",
-      "start_date": "Mar 2020",
-      "end_date": "Mar 2021"
+      "start_date": "Apr 2015",
+      "end_date": "Apr 2017"
     }
   ],
   "education": [
     {
       "degree": "Bachelor of Arts, International Relations",
       "school": "Brigham Young University - Idaho, US ",
-      "start_year": "Sep 2008",
-      "end_year": "Sep 2015"
+      "start_year": "2008",
+      "end_year": "2015"
     }
   ]
 }

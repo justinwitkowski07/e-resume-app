@@ -1,0 +1,48 @@
+{
+  "name": "Jason Revilla",
+  "email": "jason.713@outlook.com",
+  "phone": "",
+  "location": "Manila, 1004 Metro Manila, Philippines",
+  "linkedin": "",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Capgemini - Arlington, US",
+      "title": "Sr. DevOps Engineer",
+      "location": "Arlington, US",
+      "start_date": "Jul 2022",
+      "end_date": "Present"
+    },
+    {
+      "company": "InsiderSecurity - Singapore",
+      "title": "DevOps Engineer",
+      "location": "Singapore",
+      "start_date": "Feb 2019",
+      "end_date": "Jun 2022"
+    },
+    {
+      "company": "NCS Group - Singapore",
+      "title": "Automation Engineer / Build & Release Engineer",
+      "location": "Singapore",
+      "start_date": "Aug 2016",
+      "end_date": "Jan 2019"
+    },
+    {
+      "company": "CyRadar - Vietnam",
+      "title": "Software Developer / Junior DevOps Engineer",
+      "location": "Vietnam",
+      "start_date": "Jan 2014",
+      "end_date": "Jul 2016"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Vietnam National University, Hanoi",
+      "start_year": "2012",
+      "end_year": "2012"
+    }
+  ]
+}

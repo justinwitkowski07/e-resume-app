@@ -1,6 +1,6 @@
 {
   "name": "Resty Gison",
-  "email": "restyvincent028@gmail.com",
+  "email": "restyvincentg@gmail.com",
   "phone": "+63 947 409 9976",
   "location": "Iloilo, Western Visayas, PH 5000",
   "linkedin": "https://linkedin.com/in/rvgison",
@@ -11,7 +11,7 @@
       "company": "4mation Technologies",
       "title": "Senior Software Engineer",
       "location": "Sydney, New South Wales, Australia",
-      "start_date": "4/2022",
+      "start_date": "04/2022",
       "end_date": "Present"
     },
     {
@@ -41,8 +41,8 @@
     {
       "degree": "Bachelor of Science in Computer Science",
       "school": "Silliman University",
-      "start_year": "Sep 2013",
-      "end_year": "Sep 2018"
+      "start_year": "9/2013",
+      "end_year": "9/2018"
     }
   ]
 }

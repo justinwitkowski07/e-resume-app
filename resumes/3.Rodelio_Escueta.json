@@ -1,0 +1,48 @@
+{
+  "name": "Rodelio Escueta",
+  "email": "rodelio_june93@outlook.com",
+  "phone": "",
+  "location": "Davao City, 8000 Davao del Sur, Philippines",
+  "linkedin": "",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "PuzzleHR - US",
+      "title": "Sr. DevOps/SecOps Engineer",
+      "location": "US",
+      "start_date": "Oct 2022",
+      "end_date": "Present"
+    },
+    {
+      "company": "CyberJutsu - Vietnam",
+      "title": "Cloud Security Engineer / DevSecOps Engineer",
+      "location": "Vietnam",
+      "start_date": "Mar 2019",
+      "end_date": "Sep 2022"
+    },
+    {
+      "company": "Sotatek JSC - Vietnam",
+      "title": "DevOps Engineer / Cloud Engineer",
+      "location": "Vietnam",
+      "start_date": "Sep 2016",
+      "end_date": "Feb 2019"
+    },
+    {
+      "company": "FPT Software - Vietnam",
+      "title": "IT Support / SysAdmin",
+      "location": "Vietnam",
+      "start_date": "Feb 2014",
+      "end_date": "Aug 2016"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Vietnam National University, Hanoi",
+      "start_year": "2013",
+      "end_year": "2013"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Renato Almonte",
+  "email": "renato.almonte530@outlook.com",
+  "phone": "",
+  "location": "Quezon City, 1100 Metro Manila, Philippines",
+  "linkedin": "",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Cargo Express Freight - US",
+      "title": "Sr. DevOps Engineer",
+      "location": "US",
+      "start_date": "Mar 2022",
+      "end_date": "Oct 2025"
+    },
+    {
+      "company": "CyRadar - Vietnam",
+      "title": "DevOps Engineer",
+      "location": "Vietnam",
+      "start_date": "Aug 2018",
+      "end_date": "Feb 2022"
+    },
+    {
+      "company": "ArmourZero - Vietnam",
+      "title": "Software Engineer / Automation Engineer",
+      "location": "Vietnam",
+      "start_date": "Jan 2016",
+      "end_date": "Jul 2018"
+    },
+    {
+      "company": "VN CERT / VNISA - Vietnam",
+      "title": "Junior Software Engineer",
+      "location": "Vietnam",
+      "start_date": "Jun 2013",
+      "end_date": "Dec 2015"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Vietnam National University, Hanoi",
+      "start_year": "2011",
+      "end_year": "2011"
+    }
+  ]
+}
