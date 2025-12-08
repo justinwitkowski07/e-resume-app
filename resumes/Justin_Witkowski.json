@@ -10,7 +10,7 @@
     {
       "company": "Addepar",
       "title": "Senior Frontend Software Engineer",
-      "location": " Boston, MA",
+      "location": "Boston, MA",
       "start_date": "Oct 2024",
       "end_date": "Present"
     },
@@ -49,8 +49,8 @@
     },
     {
       "company": "Travelers",
-      "title": "IT Leadership Development Program Participant",
-      "location": "Hartford, Connecticut Area",
+      "title": "IT Leadership Development Program Participant (UI Developer & Mobile Enterprise Strategist)",
+      "location": "Hartford, CT",
       "start_date": "June 2014",
       "end_date": "September 2015",
       "details": [
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "company": "EMPAC  Rensselaer Polytechnic Institute",
+      "company": "EMPAC @ Rensselaer Polytechnic Institute",
       "title": "Junior Web Developer",
       "location": "Troy, NY",
       "start_date": "Apr 2012",
@@ -84,8 +84,8 @@
     {
       "degree": "Bachelor of Science in Information Technology & Web Science",
       "school": "Rensselaer Polytechnic Institute Troy, NY",
-      "start_year": "Sep 2010",
-      "end_year": "Sep 2014"
+      "start_year": "2010",
+      "end_year": "2014"
     }
   ]
 }

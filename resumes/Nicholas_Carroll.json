@@ -10,7 +10,7 @@
     {
       "company": "Koupon Media",
       "title": "Senior Full Stack Developer",
-      "location": "Plano, TX",
+      "location": "Addison, TX",
       "start_date": "12/2018",
       "end_date": "Present"
     },
@@ -57,10 +57,10 @@
   
   "education": [
     {
-      "degree": "Bachelor of Science in Computer Science",
+      "degree": "Bachelor of Science, Computer Science",
       "school": "University of North Texas",
-      "start_year": "Sep 2007",
-      "end_year": "Sep 2012"
+      "start_year": "2007",
+      "end_year": "2012"
     }
   ]
 }

@@ -54,7 +54,7 @@
     },
     {
       "company": "LiveQL",
-      "title": "Software Engineer",
+      "title": "Software Engineer (Open Source Project)",
       "location": "Playa Del Rey, CA",
       "start_date": "Jan 2018",
       "end_date": "Apr 2018",
@@ -71,7 +71,7 @@
       "company": "Cevado Technologies",
       "title": "Web Developer",
       "location": "Chelan, WA",
-      "start_date": "July 2016",
+      "start_date": "June 2016",
       "end_date": "Oct 2017",
       "details": [
         "Used PHP on the backend of Cevado’s custom real estate CMS to refactor and extend the modularity of the legacy codebase for faster product iteration.",
@@ -111,14 +111,14 @@
     {
       "degree": "Bachelor of Arts, International Relations",
       "school": "Pitzer College - Claremont, CA",
-      "start_year": "Sep 2009",
-      "end_year": "Sep 2013"
+      "start_year": "2009",
+      "end_year": "2013"
     },
     {
       "degree": "Master's degree, Management Information Systems, General",
       "school": "Claremont Graduate University - Claremont, CA",
-      "start_year": "Sep 2013",
-      "end_year": "Sep 2014"
+      "start_year": "2013",
+      "end_year": "2014"
     }
   ]
 }
