@@ -263,9 +263,13 @@ Candidate: ${profileData.name} | ${profileData.email} | ${profileData.phone} | $
 Experience: ${yearsOfExperience} years | Most Recent: ${profileData.experience[0]?.title || 'N/A'}
 
 **WORK:**
-${profileData.experience.map((job, idx) => 
-  `${idx + 1}. ${job.company} | ${job.title || ''} | ${job.start_date} - ${job.end_date}`
-).join('\n')}
+${profileData.experience.map((job, idx) => {
+  let workEntry = `${idx + 1}. ${job.company} | ${job.title || ''} | ${job.start_date} - ${job.end_date}`;
+  if (job.details && job.details.length > 0) {
+    workEntry += '\n   Details:\n' + job.details.map((detail, detailIdx) => `   - ${detail}`).join('\n');
+  }
+  return workEntry;
+}).join('\n\n')}
 
 **EDUCATION:**
 ${profileData.education.map(edu => `${edu.degree}, ${edu.school} (${edu.start_year}-${edu.end_year})`).join('\n')}
@@ -331,7 +335,13 @@ ${jd}
 
 ---
 
-**5. EXPERIENCE** (${profileData.experience.length} entries, 6-8 bullets each): Match work history. 6-8 bullets/job (recent=8, older=5-6). 25-35 words/bullet. 2-4 JD keywords/bullet. EVERY bullet needs metric (%, $, time, scale, users). Industry context in 2-3 bullets/job.
+**5. EXPERIENCE** (${profileData.experience.length} entries, 6-8 bullets each): The **JOB DESCRIPTION IS PRIMARY**. Every bullet must be mapped to 1-3 high-priority JD requirements while still accurately reflecting the candidate's real work history. 6-8 bullets/job (recent=8, older=5-6). 25-35 words/bullet. 2-4 exact JD keywords/bullet. EVERY bullet needs a metric (%, $, time, scale, users). Industry context in 2-3 bullets/job. Overall targeting **ATS score ≥ 95%**.
+
+**CRITICAL: JD-FIRST, DETAIL-BASED BULLETS (TARGET ATS ≥ 95%)** - ALWAYS treat the JD as the primary source for what to highlight, but the candidate's experience details as the source of truth:
+1. **Start from provided Details** - For any job that includes "Details", you MUST derive bullets from those actual accomplishments and responsibilities (do not invent unrelated work).
+2. **Align to JD for ATS** - Enhance and tailor each bullet by adding JD-relevant keywords, mapping to JD responsibilities, and ensuring strong metrics, with the explicit goal of achieving **ATS ≥ 95%**.
+3. **Maintain authenticity** - Keep the core accomplishments, seniority level, and technologies from the provided details; only refine wording, structure, and keyword usage for ATS optimization.
+4. **If no details provided** - Then (and only then) generate bullets based on the job title, company, dates, and JD requirements, ensuring JD alignment and ATS ≥ 95% while staying plausible for that role.
 
 **CRITICAL: TECHNOLOGY RELEASE DATES** - You MUST verify that every technology/framework/tool mentioned in experience bullets was actually available/released during that job's time period. Check the job dates (start_date - end_date) and ONLY use technologies that existed at that time. Examples:
 - Angular: Released 2016 → CANNOT use for jobs before 2016

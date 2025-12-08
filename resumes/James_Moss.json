@@ -40,35 +40,71 @@
       "title": "Senior Software Engineer",
       "location": "Venice, CA",
       "start_date": "Jan 2018",
-      "end_date": "Dec 2018"
+      "end_date": "Dec 2018",
+      "details": [
+        "Extended the frontend through the creation of React components, increasing the decoupled, modular and deterministic composition of the frontend.",
+        "Created a modular, dynamic floating Navbar to extend an inhouse library of reusable React components for increased scalability and DRY codebase.",
+        "Utilized SASS and scoped styling of components for maintainable and clean CSS, delivering modern UI.",
+        "Wrote Mocha/Chai unit tests for web worker execution of code allowing for state changes across component/action/reducer pathway, updating Redux store.",
+        "Restructured YAML for dynamic parsing of content served to React components.",
+        "Adhered to MVC principles and extended the controllers on the backend of Node/Express middleware to allow for user email signup and verification.",
+        "Built a modern, succinct React/Redux/Webpack boilerplate integrated with Thunk to support asynchronous requests for inhouse engineer development.",
+        "Supported developers through technical mentorship via group and one-on-one code reviews as related to React, Redux, NoSQL, and Node best practices."
+      ]
     },
     {
       "company": "LiveQL",
       "title": "Software Engineer (Open Source Project)",
       "location": "Playa Del Rey, CA",
       "start_date": "Jan 2018",
-      "end_date": "Apr 2018"
+      "end_date": "Apr 2018",
+      "details": [
+        "Created a developer friendly Javascript library that spans the full stack and implements real-time data updates based on state changes to the data where polling and publisher/subscriber models are inefficient or suboptimal.",
+        "Developed a custom GraphQL directive and resolver that recursively traverses the GraphQL query resolution tree and stores mutation and query data with WebSocket handles so as to uniquely identify and push updates to subscribers in real time as the data is altered.",
+        "Implemented Node middleware that followed the observer pattern and allowed for a loosely coupled reactive data layer to support one-to-many relationships between clients and the subscribed data.",
+        "Utilized a clientside and serverside module implementing WebSockets to identify hooks and push relevant, mutated data to a framework agnostic front end after the reactive data layer built a queue of subscribers to send the payload to.",
+        "Designed an optimized traversal and diffing algorithm that efficiently tracks mutations to subscribed data in the reactive data layer and created a queue of subscribers that required updates.",
+        "Maintained public project presence and documentation across website, GitHub, and npm to support developer adoption."
+      ]
     },
     {
       "company": "Cevado Technologies",
       "title": "Web Developer",
       "location": "Chelan, WA",
       "start_date": "July 2016",
-      "end_date": "Oct 2017"
+      "end_date": "Oct 2017",
+      "details": [
+        "Used PHP on the backend of Cevado’s custom real estate CMS to refactor and extend the modularity of the legacy codebase for faster product iteration.",
+        "Architected, developed and deployed an object oriented, highly modular Single Page Application that saved sensitive user data in SQL databases before presenting users with comparable home evaluations from Zillow and Eppraisal APIs.",
+        "Utilized OOP in conjunction with PHP on the backend and Javascript on the frontend to create a mobile responsive, standalone service that was modular, encapsulated and integrated into Cevado’s monolithic content management system.",
+        "Utilized PHP, SQL, a convex hull algorithm, object oriented design principles and Mapbox.js to build a dynamic map application that displayed MLS listings and relevant client information from databases enabling the sales team to target untapped real estate markets.",
+        "Used HTML5, CSS, Bootstrap, Javascript and JQuery to build frontend website templates based on web designer PSDs that shipped in Cevado’s premium product bundles."
+      ]
     },
     {
       "company": "Meng Tao Collegiate Consulting",
       "title": "Full Stack Engineer",
       "location": "Beijing, China",
       "start_date": "Jan 2018",
-      "end_date": "Apr 2018"
+      "end_date": "Apr 2018",
+      "details": [
+        "Utilized Ruby and Sinatra/Rack over Ruby on Rails in a TOEFL/SAT testing application for student growth because of the need for light and fast configuration with HTTP route intensive controllers and loosely-defined, morphing data models.",
+        "Used ERB template rendering in the TOEFL/SAT testing application due to minimal logic flow embedded in the view and speedy iteration.",
+        "Relied on OOP practices for increased modularity of the code base.",
+        "Wrote Ruby scripts to parse and scrub TOEFL, SAT documents and other educational resources obtained from a variety of APIs for input into SQL databases."
+      ]
     },
     {
       "company": "Esri",
       "title": "GIS Server Analyst",
       "location": "Redlands, CA",
       "start_date": "Jan 2014",
-      "end_date": "Aug 2014"
+      "end_date": "Aug 2014",
+      "details": [
+        "Diagnosed and developed workarounds for enterprise server, desktop, mobile and ArcGIS Online technical issues.",
+        "Educated clients on GIS best practices as it related to desktop workflows, database management and server architecture.",
+        "Achieved a 93% satisfactory rating and ranked third on the server team in incident volume."
+      ]
     }
   ],
   "education": [

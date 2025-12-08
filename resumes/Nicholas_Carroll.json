@@ -26,14 +26,32 @@
       "title": "Software Engineer",
       "location": "Plano, TX",
       "start_date": "07/2014",
-      "end_date": "06/2018"
+      "end_date": "06/2018",
+      "details": [
+        "Led design and implementation of both public and on-prem cloud solutions based on service-oriented microservice architectures using Linux Docker containers while following 12-factor best practices.",
+        "Deployed gateways and reverse proxies.",
+        "Built many different user interfaces using the latest versions of Angular and React.",
+        "Other UI libraries/frameworks included Angular Material, MineralUI, PrimeNG, Chart.js and Handsontable.",
+        "Designed and implemented various REST and websocket APIs using ExpressJS and SocketIO libraries in Node.",
+        "Created GraphQL services and connected front- and back-ends using Apollo Client & Server for Javascript. Facilitated inter-service communication through Kafka.",
+        "Persisted application, session and customer data in MongoDB.",
+        "Published Node libraries to Artifactory that employed the provider pattern and other design patterns to model application data and simplify the interfaces to Mongo and Kafka.",
+        "Created a React windows desktop application using ElectronJS.",
+        "Built dozens of POCs to validate potential technologies for adoption into our solutions. Integrated git with Jenkins and automated CI through jobs and pipelines.",
+        "Led code reviews, sprint plannings, and backlog groomings.",
+        "Demoed features and functionality to stakeholders.",
+        "Developed CLIs and created compose files to facilitate development for engineers."
+      ]
     },
     {
       "company": "CA Technologies",
       "title": "Associate Software Engineer",
       "location": "Plano, TX",
       "start_date": "06/2013",
-      "end_date": "06/2014"
+      "end_date": "06/2014",
+      "details": [
+        "Developed Migration Applications in Java and various conversion tools in REXX for CA Services."
+      ]
     }
   ],
   

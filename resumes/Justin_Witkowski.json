@@ -26,28 +26,57 @@
       "title": "Web Developer",
       "location": "Boston, MA",
       "start_date": "July 2019",
-      "end_date": "Jan 2022"
+      "end_date": "Jan 2022",
+      "details": [
+        "Built accessible front-end web applications used to administer ballot design, voter authentication, and reporting for U.S. and international elections.",
+        "Developed and maintained the web portion of a broader elections system that enabled secure smartphone voting for remote and overseas voters.",
+        "Collaborated with cross-functional stakeholders to ensure usability, security, and compliance requirements were met across election workflows."
+      ]
     },
     {
       "company": "Tank Design",
       "title": "Web Developer",
       "location": "Cambridge, MA",
       "start_date": "Oct 2015",
-      "end_date": "July 2019"
+      "end_date": "July 2019",
+      "details": [
+        "Developed and managed interactive prototypes for FedEx Tracking, Billing, Shipping, and Rating, used to test and validate product experiences across 7 languages and 13 countries.",
+        "Partnered with FedEx stakeholders to identify new opportunities and expectations that strengthened the relationship between FedEx and its customers.",
+        "Implemented ADA-compliant, production-ready CSS, HTML, and JavaScript components and build kits for FedEx.com and FedEx Rewards, reaching over 15 million unique visitors daily.",
+        "Created monthly interactive thought pieces and articles for Tank Design’s website in collaboration with UX, design, content, and management.",
+        "Delivered rich, scroll-based and data-driven experiences using technologies such as AngularJS 2.0, React, React Native, D3.js, ScrollMagic, Skrollr, Waypoints, and custom JavaScript solutions."
+      ]
     },
     {
-      "company": " Travelers",
-      "title": "IT Leadership Development Program Participant(UI Developer & Mobile Enterprise Strategist)",
-      "location": "Cambridge, MA",
-      "start_date": "Oct 2015",
-      "end_date": "July 2019"
+      "company": "Travelers",
+      "title": "IT Leadership Development Program Participant (UI Developer & Mobile Enterprise Strategist)",
+      "location": "Hartford, Connecticut Area",
+      "start_date": "June 2014",
+      "end_date": "September 2015",
+      "details": [
+        "Participated in an accelerated, multi-rotation IT Leadership Development Program with a business- and management-focused curriculum.",
+        "Contributed to leadership committees and initiatives, including media team services, team-building activities, university relations, and candidate interviewing.",
+        "Completed ITIL Foundations Certification and attended the Gartner Catalyst Conference 2015.",
+        "As a UI Developer (June 2014 – June 2015), developed large-scale, customer-facing, responsive access and identity management SPAs and contributed to agent portal applications with a strong UX focus.",
+        "Performed unit and cross-browser compatibility testing, continuous integration, and code reviews while partnering closely with QA leads to maintain code quality.",
+        "Collaborated with multiple teams, customers, and product owners in a fast-paced environment, promoting SDLC and Agile best practices.",
+        "As a Mobile Enterprise Strategist (June 2015 – September 2015), identified, proposed, and implemented mobile application solutions to improve productivity for the Travelers digital workforce.",
+        "Performed data analytics and preparation to support an enterprise-wide BlackBerry-to-iPhone 6 conversion rollout."
+      ]
     },
     {
       "company": "EMPAC  Rensselaer Polytechnic Institute",
       "title": "Junior Web Developer",
       "location": "Troy, NY",
       "start_date": "Apr 2012",
-      "end_date": "Apr 2014"
+      "end_date": "Apr 2014",
+      "details": [
+        "Collaborated on a four-person team to transition an experimental arts theater website from a static site to a dynamic Drupal 7 content management system (empac.rpi.edu).",
+        "Reduced the time required to add new content, publish events, and resolve site issues by approximately 300% through streamlined workflows and tooling.",
+        "Leveraged caching technologies such as Varnish and Memcache to improve response times and overall site performance.",
+        "Used version control and Scrum methodology to balance multiple concurrent projects and consistently meet deadlines.",
+        "Contributed new Drupal-based projects and improvements back to the Drupal.org community."
+      ]
     }
   ],
   

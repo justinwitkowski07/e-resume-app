@@ -12,28 +12,61 @@
       "title": "Senior Full Stack Engineer",
       "location": "California, US",
       "start_date": "March 2024",
-      "end_date": "September 2025"
+      "end_date": "September 2025",
+      "details": [
+        "Architected and led development of a multi-tenant, cloud-native analytics platform processing over 2M daily API calls with horizontal scalability and automated fault recovery.",
+        "Designed a domain-isolated architecture improving data integrity and achieving 99.99% uptime SLA.",
+        "Integrated AI-driven predictive UX for real-time form assistance and contextual recommendations, increasing task completion rates by 42%.",
+        "Implemented event-driven communication pipelines that improved throughput by 55%.",
+        "Built an enterprise-grade UI component library aligned with accessibility standards, accelerating frontend delivery by 30%.",
+        "Established CI/CD pipelines with automated testing, code scanning, and container security, reducing release regressions by 78%.",
+        "Mentored a 6-member engineering team, introducing modular monorepo workflows and DDD principles."
+      ]
     },
     {
       "company": "Dreamix",
       "title": "Full Stack Engineer",
       "location": "Sofia, Bulgaria",
       "start_date": "January 2022",
-      "end_date": "February 2024"
+      "end_date": "February 2024",
+      "details": [
+        "Delivered high-performance web applications serving 1.2M+ daily active users with optimized data fetching and caching strategies.",
+        "Led backend modernization from monolithic to microservice-based architecture, cutting deployment times by 90% and downtime by 35%.",
+        "Designed a hybrid API gateway for improved data delivery efficiency, reducing latency by 45%.",
+        "Implemented secure authentication and session management integrated with enterprise identity systems.",
+        "Developed AI-assisted tools for automated ticket summarization and intent recognition, reducing support time by 40%.",
+        "Improved test coverage to 92% through automation and integrated QA pipelines.",
+        "Partnered with DevOps to achieve zero-downtime blue-green deployments."
+      ]
     },
     {
       "company": " emagine",
       "title": "Full Stack Developer",
       "location": "Copenhagen, Denmark",
       "start_date": "April 2018",
-      "end_date": "December 2021"
+      "end_date": "December 2021",
+      "details": [
+        "Modernized legacy systems into modular, component-based architectures, improving load times by over 80%.",
+        "Engineered data processing APIs for financial analytics, handling high-volume data streams with optimized throughput.",
+        "Created reusable UI and API component libraries adopted across multiple internal teams.",
+        "Introduced AI-powered accessibility and search features, improving task success rates by 38%.",
+        "Built automated CI/CD workflows ensuring parity between staging and production environments.",
+        "Implemented organization-wide code quality and testing standards, improving maintainability by 25%."
+      ]
     },
     {
       "company": "NashTech",
       "title": "Junior Full stack Developer",
       "location": "London, UK",
       "start_date": "January 2017",
-      "end_date": "March 2018"
+      "end_date": "March 2018",
+      "details": [
+        "Developed enterprise-grade applications for government and finance clients with complex approval workflows.",
+        "Optimized data queries and database structures, improving report generation speeds by up to 85%.",
+        "Implemented secure API architectures with SSO and full audit logging.",
+        "Automated build and deployment processes through integrated CI pipelines.",
+        "Introduced full-stack observability with centralized logging and performance metrics."
+      ]
     }
   ],
   
