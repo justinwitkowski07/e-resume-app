@@ -54,7 +54,7 @@
     },
     {
       "company": "LiveQL",
-      "title": "Software Engineer (Open Source Project)",
+      "title": "Software Engineer",
       "location": "Playa Del Rey, CA",
       "start_date": "Jan 2018",
       "end_date": "Apr 2018",
@@ -85,8 +85,8 @@
       "company": "Meng Tao Collegiate Consulting",
       "title": "Full Stack Engineer",
       "location": "Beijing, China",
-      "start_date": "Jan 2018",
-      "end_date": "Apr 2018",
+      "start_date": "Aug 2014",
+      "end_date": "Jan 2016",
       "details": [
         "Utilized Ruby and Sinatra/Rack over Ruby on Rails in a TOEFL/SAT testing application for student growth because of the need for light and fast configuration with HTTP route intensive controllers and loosely-defined, morphing data models.",
         "Used ERB template rendering in the TOEFL/SAT testing application due to minimal logic flow embedded in the view and speedy iteration.",
