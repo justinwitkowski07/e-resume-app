@@ -1,0 +1,48 @@
+{
+  "name": "Jerome Mendoza",
+  "email": "jerome.mendoza.crazy@outlook.com",
+  "phone": "",
+  "location": "Mandaluyong City, Metro Manila, 1550, Philippines",
+  "linkedin": "",
+  "website": "",
+
+  "experience": [
+    {
+      "company": "M3 Tech",
+      "title": "Sr. Data Architect / DBA",
+      "location": "Montreal, Canada",
+      "start_date": "Jul 2022",
+      "end_date": "Dec 2025"
+    },
+    {
+      "company": "SavvyComp",
+      "title": "Senior Data Architect / Senior DBA",
+      "location": "Hanoi, Vietnam",
+      "start_date": "Mar 2018",
+      "end_date": "Jun 2022"
+    },
+    {
+      "company": "Codeus",
+      "title": "Senior Data Architect",
+      "location": "Serbia",
+      "start_date": "Sep 2015",
+      "end_date": "Feb 2018"
+    },
+    {
+      "company": "Keystone Strategy",
+      "title": "Senior Data Engineer / Senior DBA",
+      "location": "CA, US",
+      "start_date": "Mar 2013",
+      "end_date": "Aug 2015"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "school": "The University of Cambridge, England",
+      "start_year": "2007",
+      "end_year": "2011"
+    }
+  ]
+}

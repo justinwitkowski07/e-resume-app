@@ -8,30 +8,30 @@
   
   "experience": [
     {
-      "company": "Capgemini - Arlington, US",
+      "company": "Capgemini",
       "title": "Sr. DevOps Engineer",
       "location": "Arlington, US",
       "start_date": "Jul 2022",
       "end_date": "Present"
     },
     {
-      "company": "InsiderSecurity - Singapore",
+      "company": "InsiderSecurity",
       "title": "DevOps Engineer",
       "location": "Singapore",
       "start_date": "Feb 2019",
       "end_date": "Jun 2022"
     },
     {
-      "company": "NCS Group - Singapore",
+      "company": "NCS Group",
       "title": "Automation Engineer / Build & Release Engineer",
       "location": "Singapore",
       "start_date": "Aug 2016",
       "end_date": "Jan 2019"
     },
     {
-      "company": "CyRadar - Vietnam",
+      "company": "CyRadar",
       "title": "Software Developer / Junior DevOps Engineer",
-      "location": "Vietnam",
+      "location": "Hanoi, Vietnam",
       "start_date": "Jan 2014",
       "end_date": "Jul 2016"
     }
@@ -41,7 +41,7 @@
     {
       "degree": "Bachelor of Science in Computer Science",
       "school": "Vietnam National University, Hanoi",
-      "start_year": "2012",
+      "start_year": "2008",
       "end_year": "2012"
     }
   ]

@@ -1,0 +1,48 @@
+{
+  "name": "Harris Zulkifli",
+  "email": "harris.mineer@outlook.com",
+  "phone": "",
+  "location": "Pasig City, Metro Manila, 1605, Philippines",
+  "linkedin": "",
+  "website": "",
+
+  "experience": [
+    {
+      "company": "Cargo Express Freight",
+      "title": "Sr. Data DBA / Engineer",
+      "location": "California, US",
+      "start_date": "Aug 2023",
+      "end_date": "Oct 2025"
+    },
+    {
+      "company": "QuoStar",
+      "title": "Senior DBA / Senior Data Engineer",
+      "location": "London, UK",
+      "start_date": "Apr 2019",
+      "end_date": "Jul 2023"
+    },
+    {
+      "company": "Snapsheet Inc",
+      "title": "Senior DBA",
+      "location": "Illinois, US",
+      "start_date": "Nov 2016",
+      "end_date": "Mar 2019"
+    },
+    {
+      "company": "Audacious Inquiry",
+      "title": "Junior DBA / Data Engineer",
+      "location": "Maryland, US",
+      "start_date": "May 2014",
+      "end_date": "Oct 2016"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "school": "Ritsumeikan University - Kyoto, Japan",
+      "start_year": "2010",
+      "end_year": "2014"
+    }
+  ]
+}

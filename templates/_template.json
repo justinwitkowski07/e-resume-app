@@ -1,0 +1,44 @@
+{
+  "name": "Your Full Name",
+  "email": "your.email@example.com",
+  "phone": "+1 234 567 8900",
+  "location": "City, State",
+  "linkedin": "https://www.linkedin.com/in/yourprofile",
+  "website": "https://yourwebsite.com",
+  
+  "experience": [
+    {
+      "company": "Company Name 1",
+      "title": "Your Job Title",
+      "location": "City, State",
+      "start_date": "Jan 2020",
+      "end_date": "Present",
+      "details": [
+        "Led development of key features using React and Node.js, improving user engagement by 40%",
+        "Architected microservices infrastructure on AWS, reducing deployment time by 50%",
+        "Collaborated with cross-functional teams to deliver scalable solutions for 100K+ users"
+      ]
+    },
+    {
+      "company": "Company Name 2",
+      "title": "Your Previous Job Title",
+      "location": "City, State",
+      "start_date": "Jan 2018",
+      "end_date": "Dec 2019",
+      "details": [
+        "Developed and maintained RESTful APIs using Python and Django",
+        "Optimized database queries, reducing response time by 30%",
+        "Implemented CI/CD pipelines using Jenkins and Docker"
+      ]
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University Name",
+      "start_year": "2014",
+      "end_year": "2018"
+    }
+  ]
+}

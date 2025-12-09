@@ -5,44 +5,42 @@
   "location": "Taguig City, 1634 Metro Manila, Philippines",
   "linkedin": "",
   "website": "",
-  
   "experience": [
     {
-      "company": "M3 Tech - Canada",
+      "company": "M3 Tech",
       "title": "Sr. Cloud/DevOps Engineer",
-      "location": "Canada",
+      "location": "Montreal, Canada",
       "start_date": "Sep 2021",
       "end_date": "Nov 2025"
     },
     {
-      "company": "Chong Lua Dao - Vietnam",
+      "company": "Chong Lua Dao",
       "title": "Cloud Engineer / DevOps Engineer",
-      "location": "Vietnam",
+      "location": "Hanoi, Vietnam",
       "start_date": "Apr 2018",
       "end_date": "Aug 2021"
     },
     {
-      "company": "CyStack - Vietnam",
+      "company": "CyStack",
       "title": "Cloud Administrator / DevOps Specialist",
-      "location": "Vietnam",
+      "location": "Hanoi, Vietnam",
       "start_date": "Oct 2015",
       "end_date": "Mar 2018"
     },
     {
-      "company": "VNCS - Vietnam",
+      "company": "VNCS",
       "title": "System Administrator / Junior Cloud Engineer",
-      "location": "Vietnam",
+      "location": "Hanoi, Vietnam",
       "start_date": "Apr 2013",
       "end_date": "Sep 2015"
     }
   ],
-  
   "education": [
     {
       "degree": "Bachelor of Science in Computer Science",
       "school": "Vietnam National University, Hanoi",
       "start_year": "2011",
-      "end_year": "2011"
+      "end_year": "2015"
     }
   ]
 }

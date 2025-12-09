@@ -1,0 +1,48 @@
+{
+  "name": "Nathan Olivar",
+  "email": "nathan.54@outlook.com",
+  "phone": "",
+  "location": "Quezon City, Metro Manila, 1108, Philippines",
+  "linkedin": "",
+  "website": "",
+
+  "experience": [
+    {
+      "company": "Capgemini",
+      "title": "Sr. Data Architect / Data Engineer",
+      "location": "Arlington, US",
+      "start_date": "Sep 2022",
+      "end_date": "Oct 2025"
+    },
+    {
+      "company": "Kiggla",
+      "title": "Senior Data Architect / Senior Data Engineer",
+      "location": "FL, US",
+      "start_date": "May 2019",
+      "end_date": "Aug 2022"
+    },
+    {
+      "company": "Stanga1",
+      "title": "Senior Data Engineer",
+      "location": "Sofia, Bulgaria",
+      "start_date": "Jan 2017",
+      "end_date": "Apr 2019"
+    },
+    {
+      "company": "FPT Software",
+      "title": "Data Engineer",
+      "location": "Hanoi, Vietnam",
+      "start_date": "Jul 2014",
+      "end_date": "Dec 2016"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "school": "Wuhan University, China",
+      "start_year": "2008",
+      "end_year": "2012"
+    }
+  ]
+}

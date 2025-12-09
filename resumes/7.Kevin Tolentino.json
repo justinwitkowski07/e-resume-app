@@ -1,0 +1,48 @@
+{
+  "name": "Kevin Tolentino",
+  "email": "kevin.117@outlook.com",
+  "phone": "",
+  "location": "Bacoor City, Cavite, 4102, Philippines",
+  "linkedin": "",
+  "website": "",
+
+  "experience": [
+    {
+      "company": "PuzzleHR",
+      "title": "Sr. Data Architect / Data Analyst",
+      "location": "FL, US",
+      "start_date": "May 2021",
+      "end_date": "Nov 2025"
+    },
+    {
+      "company": "M3 Tech",
+      "title": "Senior Data Architect / Head of Analytics",
+      "location": "Montreal, Canada",
+      "start_date": "Jan 2018",
+      "end_date": "Apr 2021"
+    },
+    {
+      "company": "The BHW Group",
+      "title": "Data Architect",
+      "location": "TX, US",
+      "start_date": "Aug 2015",
+      "end_date": "Dec 2017"
+    },
+    {
+      "company": "Sotatek JSC",
+      "title": "Senior Data Analyst",
+      "location": "Hanoi, Vietnam",
+      "start_date": "Feb 2013",
+      "end_date": "Jul 2015"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "school": "Nanjing University",
+      "start_year": "2009",
+      "end_year": "2013"
+    }
+  ]
+}
