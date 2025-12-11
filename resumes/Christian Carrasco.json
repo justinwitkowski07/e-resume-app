@@ -1,0 +1,41 @@
+{
+  "name": "Christian Carrasco",
+  "email": "christianmadrid201@gmail.com",
+  "phone": "+34 722243634",
+  "location": "Catalonia, Spain",
+  "linkedin": "https://www.linkedin.com/in/christian-carrasco-ruedo",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "lquadrat",
+      "title": "Programador Full stack",
+      "location": "",
+      "start_date": "Aug 2023",
+      "end_date": "Aug 2025"
+    },
+    {
+      "company": "STP PROJECTS",
+      "title": "Desarrollador de back-end",
+      "location": "",
+      "start_date": "Nov 2021",
+      "end_date": "Aug 2023"
+    },
+    {
+      "company": "Corva",
+      "title": "Junior Software Engineer",
+      "location": "",
+      "start_date": "Jun 2018",
+      "end_date": "Oct 2021"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor’s Degree in Computer Science",
+      "school": "University of Barcelona",
+      "start_year": "2018",
+      "end_year": ""
+    }
+  ]
+}
