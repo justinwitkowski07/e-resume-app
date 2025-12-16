@@ -1,0 +1,48 @@
+{
+  "name": "PAVLO VORCHYLO",
+  "email": "pavlo2923@outlook.com",
+  "phone": "",
+  "location": "Poznan, Wielkopolskie, Poland",
+  "linkedin": "https://www.linkedin.com/in/pavlo-vorchylo-474ba3396/",
+  "website": "",
+  
+  "experience": [
+    {
+      "company": "Kiggla",
+      "title": "Senior Full Stack Engineer",
+      "location": "Florida, US",
+      "start_date": "Mar 2025",
+      "end_date": "Oct 2025"
+    },
+    {
+      "company": "Visuality",
+      "title": "Full Stack Engineer",
+      "location": "Poznan, Poland",
+      "start_date": "Aug 2022",
+      "end_date": "Sep 2024"
+    },
+    {
+      "company": "DevPark",
+      "title": "Full Stack Developer",
+      "location": "Poznan, Poland",
+      "start_date": "Jul 2019",
+      "end_date": "Jun 2022"
+    },
+    {
+      "company": "Mood Up",
+      "title": "Junior Full stack Developer",
+      "location": "Poznan, Poland",
+      "start_date": "Sep 2017",
+      "end_date": "April 2019"
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Bachelor's degree, Computer Science",
+      "school": "Poznań Collegium Da Vinci",
+      "start_year": "2011",
+      "end_year": "2015"
+    }
+  ]
+}
